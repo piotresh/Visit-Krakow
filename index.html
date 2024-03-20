@@ -7,8 +7,12 @@
     <title>
        Visit Krakow 
     </title>
-
+    
+}
     <style>
+  @font-face {
+    font-family: olive-font;
+    src: url(OliveVillage-Regular.otf);}
         * {
         	box-sizing: border-box;
         }
@@ -21,12 +25,13 @@
         #navlist {
         	overflow: hidden;
         	background-color: #0074D9;
-        	padding: 90px 10px;
+        	padding: 300px 10px;
         	transition: 0.4s;
         	position: fixed;
         	width: 100%;
         	top: 0;
         	z-index: 1;
+          background-image: url("sunset.jpg");
         }
         	
         #navlist a {
@@ -41,9 +46,11 @@
         }
         	
         #navlist #logo {
-        	font-size: 35px;
+          font-family: olive-font;
+        	font-size: 70px;
         	font-weight: bold;
         	transition: 0.4s;
+          
         }
         	
         #navlist a:hover {
@@ -61,13 +68,14 @@
         	font-size:22px;
         }
     </style>
+    
 </head>
 
 <body>
 
     <!-- Navlist of header -->
     <div id="navlist">
-        <a href="#default" id="logo">
+        <a href="#default" id="logo" >
             Krakow
         </a>
 
@@ -105,21 +113,22 @@
         };
         
         function scrollFunction() {
-        	if (document.body.scrollTop > 90 ||
-        		document.documentElement.scrollTop > 90)
+        	if (document.body.scrollTop > 70 ||
+        		document.documentElement.scrollTop > 70)
         	{
         		document.getElementById("navlist")
         					.style.padding = "25px 10px";
+            
         		
         		document.getElementById("logo")
         					.style.fontSize = "24px";
         	}
         	else {
         		document.getElementById("navlist")
-        					.style.padding = "90px 10px";
+        					.style.padding = "300px 10px";
         					
         		document.getElementById("logo")
-        					.style.fontSize = "35px";
+        					.style.fontSize = "70px";
         	}
         }
     </script>
